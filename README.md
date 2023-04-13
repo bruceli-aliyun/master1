@@ -10,7 +10,7 @@ celery -A demo_celery.tasks worker -l info --pool=solo
 # config.py
 broker_url = 'redis://localhost/5'  # 任务库：实际情况选择
 result_backend = 'redis://localhost/6'  # 结果库：实际情况选择
-include = ['demo_celery_2.demo']  # 加载应用
+include = ['demo_celery2.demo']  # 加载应用
 ```
 ### mysql
 ```sql
