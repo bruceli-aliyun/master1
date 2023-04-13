@@ -22,7 +22,6 @@ use demo;
 create database IF NOT EXISTS demo DEFAULT CHAR SET  utf8mb4 COLLATE utf8mb4_unicode_ci;
 -- 查看错误日志, 链接地址 : http://cd.itheima.com/news/20221007/161036.html
 show variables like '%log_error%';
-
 show variables like '%character%';
 ```
 ```sql
