@@ -29,13 +29,15 @@ show variables like '%character%';
 -- demo 数据表操作 comment '注释'
 show tables;
 create table 'table_name'(
-    id int unsigned auto_increment COMMENT 'id:类型int,约束,整型非负数,自增',
+    id int unsigned auto_increment COMMENT 'id:类型int,约束,整型,非负数,自增',
     name varchar(20) NOT NULL COMMENT 'name:类型可变长字符串,约束不能为空', 
     primary key ('id') COMMENT '设置id主键为,也可在字段后面添加',
     unique key 'name' ('name') COMMENT '设置name唯一索引,也可在name字段后面添加，与主键类似'
 )ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+show create table table_name; -- 查看创建表语句
 desc table_name; -- 查看表字段及约束
 drop table table_name; -- 删除表
+insert into table_name values ('1','张三'),(2, '李四'),(3, '王二麻子');
 ```
 ```text
 # 表数据类型 获取:SELECT DATA_TYPE FROM information_schema.COLUMNS GROUP BY DATA_TYPE
@@ -54,6 +56,7 @@ drop table table_name; -- 删除表
 检索约束	保证字段值满足某一个条件(8.0.16版本之后)	CHECK
 外键约束	用来让两张表的数据之间建立连接，保证数据的一致性和完整性	FOREIGN KEY
 ```
-```text
-
+```python
+todo = '注意: 有时候不要一为的去封装，有时候简单一点也挺好'
 ```
+
