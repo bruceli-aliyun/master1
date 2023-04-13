@@ -10,6 +10,7 @@ def executive():
 
 try:
     pool = MysqlPool()
+    print(pool.pool_name)
     con = pool.get_connection()
     cursor = con.cursor()
 except Exception as e:
